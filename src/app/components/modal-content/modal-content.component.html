@@ -1,0 +1,58 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Category: </h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h5>Displaying information via Modal!</h5>
+    <!-- Here name and user come from inside category-item  
+        Where inside the open() we declare our variables
+    -->
+    <!-- <p>Hello, {{name}}!</p> -->
+    <!-- will not appear correctly because it is an object! -->
+    <!-- {{ object }}
+    <br>{{ object.name }}
+    <br>{{ object.age }} -->
+
+    <form 
+    class= "add-form"
+    
+    > 
+    <!-- (ngSubmit)= "onUpdate(category)" -->
+      <div class= "form-control">
+        <input 
+            type= "text" 
+            name= "name" 
+            id= "name" 
+            placeholder= "Add Name"
+            [(ngModel)]= "name"
+        />
+      </div>     
+        <div class= "form-control">
+          <input 
+            type= "text" 
+            name= "shortname" 
+            id= "shortname" 
+            placeholder= "Add Shortname"
+            [(ngModel)]= "shortName"
+          />
+        </div>
+      <div class= "form-control">
+        <input 
+            type= "text" 
+            name= "code" 
+            id= "code" 
+            placeholder= "Add Code #"
+            [(ngModel)]= "code"
+        />
+      </div>
+      <!-- <input type= "submit" value= "Save Changes" class= "btn btn-block" /> -->
+      <input (click)="onUpdate()" type= "submit" value= "Save Changes" class= "btn btn-block" />
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+

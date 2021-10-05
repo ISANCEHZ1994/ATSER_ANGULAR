@@ -1,0 +1,24 @@
+<div 
+    [ngClass] = "{ __v: category.__v }"
+    class="category"
+>
+   <h3>{{ category.name }}
+        <fa-icon
+            (click) = "onDelete(category)"
+            [ngStyle] = "{'color': 'red'}"
+            [icon] = "faTimes"
+        ></fa-icon>
+        <fa-icon
+            (click)="open(category)"
+            [ngStyle] = "{'color': 'green'}"
+            [icon] = "pencil"
+        ></fa-icon>
+        
+   </h3>
+   <p> SHORTNAME: {{ category.shortName }}</p>
+   <p> V: {{ category.__v }}</p>
+   <p> CODE: {{ category.code }}</p>
+   
+</div>
+
+

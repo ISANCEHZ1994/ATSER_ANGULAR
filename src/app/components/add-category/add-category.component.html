@@ -1,0 +1,41 @@
+<form
+    class= "add-form"
+    (ngSubmit)= "onSubmit()"
+>
+    <div class= "form-control">
+        <!-- <label for="code">Code</label> -->
+        <input 
+            type= "text" 
+            name= "code" 
+            id= "code" 
+            placeholder= "Add Code #"
+            [(ngModel)]= "code" 
+        />
+    </div>
+    <div class= "form-control">
+        <!-- <label for="Add Name">Add Name</label> -->
+        <input 
+            type= "text" 
+            name= "name" 
+            id= "name" 
+            placeholder= "Add Name"
+            [(ngModel)]= "name"
+        />
+    </div>
+    <div class= "form-control">
+        <!-- <label for="shortName">Shortname</label> -->
+        <input 
+            type= "text" 
+            name= "shortname" 
+            id= "shortname" 
+            placeholder= "Add Shortname"
+            [(ngModel)]= "shortName"
+        />
+    </div>
+    <!-- Below the infomration can appear as typed! -->
+    <!-- {{ code }}
+    {{ name }}
+    {{ shortName }} -->
+    <input type= "submit" value= "Save Category" class= "btn btn-block" />
+</form>
+
