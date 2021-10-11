@@ -51,7 +51,7 @@ export class CategoryItemComponent implements OnInit {
     const modalRef = this.modalService.open(ModalContentComponent);
     modalRef.componentInstance.passedCategory = passedCategory;
     modalRef.componentInstance.passedResult = this.result;
-    // modalRef.componentInstance.object = this.object;
+    // modalRef.componentInstance.object = this.object; // Here we are sending the object defined in category-item and sending it to modal-content
 
     // console.log(modalRef, 'modalRef here')
     modalRef.result.then((result) => {
