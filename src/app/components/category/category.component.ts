@@ -33,13 +33,6 @@ export class CategoryComponent implements OnInit {
 
   };
 
-  updateCategory(category: Category) {
-    this.categoryService
-      .updateCategory(category)
-      .subscribe();
-      console.log(category, "updating this category!");
-  };
-
   addCategory(category: Category) {
     this.categoryService
       .addCategory(category)

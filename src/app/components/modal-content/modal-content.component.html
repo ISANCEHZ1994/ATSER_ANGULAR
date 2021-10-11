@@ -6,6 +6,7 @@
   </div>
   <div class="modal-body">
     <h5>Displaying information via Modal!</h5>
+    <!--  EXAMPLE WORK BELOW -->
     <!-- Here name and user come from inside category-item  
         Where inside the open() we declare our variables
     -->
@@ -14,19 +15,36 @@
     <!-- {{ object }}
     <br>{{ object.name }}
     <br>{{ object.age }} -->
-
+    
     <form 
     class= "add-form"
-    
-    > 
-    <!-- (ngSubmit)= "onUpdate(category)" -->
+    (ngSubmit)= "onUpdate(passedCategory)"
+    >
+     <!-- (ngSubmit)= "onUpdate(passedCategory)"  -->
+    <div style="display:none;">
+      <input
+        type="text"
+        name="category_id"
+        id="category_id"
+        [(ngModel)] = "passedCategory._id"
+      />
+    </div>
+    <div class= "form-control">
+        <input 
+            type= "text" 
+            name= "code" 
+            id= "code" 
+            placeholder= "Add Code #"
+            [(ngModel)]= "passedCategory.code"
+        />
+      </div>
       <div class= "form-control">
         <input 
             type= "text" 
             name= "name" 
             id= "name" 
             placeholder= "Add Name"
-            [(ngModel)]= "name"
+            [(ngModel)]= "passedCategory.name"
         />
       </div>     
         <div class= "form-control">
@@ -35,20 +53,12 @@
             name= "shortname" 
             id= "shortname" 
             placeholder= "Add Shortname"
-            [(ngModel)]= "shortName"
+            [(ngModel)]= "passedCategory.shortName"
           />
         </div>
-      <div class= "form-control">
-        <input 
-            type= "text" 
-            name= "code" 
-            id= "code" 
-            placeholder= "Add Code #"
-            [(ngModel)]= "code"
-        />
-      </div>
-      <!-- <input type= "submit" value= "Save Changes" class= "btn btn-block" /> -->
-      <input (click)="onUpdate()" type= "submit" value= "Save Changes" class= "btn btn-block" />
+      <!-- (click)= "onUpdate(passedCategory)" -->
+      <!-- <input (click)="onUpdate(passedCategory)" type= "submit" value= "Save Changes" class= "btn btn-block" /> -->
+      <input  type= "submit" value= "Save Changes" class= "btn btn-block" />
     </form>
 
   </div>

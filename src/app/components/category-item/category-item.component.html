@@ -9,7 +9,8 @@
             [icon] = "faTimes"
         ></fa-icon>
         <fa-icon
-            (click)="open(category)"
+            (click) = "open(category)"
+            (onUpdateCategory) = "updateCategory(category)"
             [ngStyle] = "{'color': 'green'}"
             [icon] = "pencil"
         ></fa-icon>

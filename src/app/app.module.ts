@@ -9,13 +9,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { CategoryItemComponent } from './components/category-item/category-item.component';
 import { CategoryComponent } from './components/category/category.component';
-import { CategoryService } from './service/category.service';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { AddCategoryComponent } from './components/add-category/add-category.component';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
-
-
 
 @NgModule({
   declarations: [
